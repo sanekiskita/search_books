@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
 import { connect } from "react-redux";
-import { setBooks, setSelectBook, setBooksImg } from "../../redux/action";
+import { setBooks, setSelectBook, setBooksImg } from "@redux//action";
 //img
-import imgCover from "../../img/cover.png";
+import imgCover from "@img/cover.png";
 //components
 import Arrow from "./Arrow/Arrow";
 

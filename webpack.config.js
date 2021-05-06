@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const Paths = {
   src: path.join(__dirname, "./src"),
-  dist: path.join(__dirname, "./dist"),
+  dist: path.join(__dirname, "./docs"),
   assets: "assets/",
 };
 
@@ -63,7 +63,11 @@ module.exports = {
     port: 8000,
   },
   resolve: {
-    alias: {},
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+      "@redux": path.resolve(__dirname, "./src/redux"),
+      "@img": path.resolve(__dirname, "./src/img"),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

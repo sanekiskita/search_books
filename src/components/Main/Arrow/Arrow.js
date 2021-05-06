@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setBooks, setBooksImg, addCountBook } from "../../../redux/action";
+import { setBooks, setBooksImg, addCountBook } from "@redux//action";
 
 function Arrow({
   ErrorSearch,

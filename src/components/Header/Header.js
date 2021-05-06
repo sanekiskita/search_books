@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setSearch, delBooks, delBooksImg } from "../../redux/action";
-
-import LogoImg from "../../img/Logo.jpg";
+import { setSearch, delBooks, delBooksImg } from "@redux//action";
+//img
+import LogoImg from "@img/Logo.jpg";
 
 function Header({ setSearch, delBooks, delBooksImg, search }) {
   const [BookValue, setBookValue] = React.useState("");

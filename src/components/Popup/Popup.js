@@ -1,8 +1,9 @@
 import React from "react";
-import nullAuthor from "../../img/author/nullAuthor.jpg";
 import axios from "axios";
 import { connect } from "react-redux";
-import { setBooks, setSelectBook } from "../../redux/action";
+import { setBooks, setSelectBook } from "@redux/action";
+//img
+import nullAuthor from "@img/author/nullAuthor.jpg";
 
 function Popup({ booksImg, books, selectBook, setSelectBook }) {
   const [imgAuthor, setImgAuthor] = React.useState(nullAuthor);
