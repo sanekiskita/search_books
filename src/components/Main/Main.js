@@ -156,13 +156,12 @@ function Main({
               <div className="Books__Item__publish">
                 Первая публикация в {book.first_publish_year}
               </div>
-              {!!book.author_name ? (
-                <div className="Books__Item__author">
-                  Автор:{book.author_name.join(", ")}
-                </div>
-              ) : (
-                <div className="Books__Item__author">Автор: нет данных</div>
-              )}
+              <div className="Books__Item__author">
+                Автор:{" "}
+                {!!book.author_name
+                  ? book.author_name.join(", ")
+                  : "нет данных"}
+              </div>
             </div>
           ) : (
             ""
