@@ -46,34 +46,6 @@ function Main({
   };
 
   const getLinkImgBooks = async (book) => {
-    /*
-    const getstatus = async (link) => {
-      try {
-        const res = await axios.get(link, {
-          cancelToken: new CancelToken(function executor(c) {
-            cancel = c;
-            return [];
-          }),
-        });
-        return res.status;
-      } catch (e) {
-        return 404;
-      }
-    };*/
-    /*
-    const getSrc = async (id, key, link, size) => {
-      for (const element of id) {
-        if (
-          (await getstatus(
-            `${link}${key}/${element}-${size}.jpg?default=false`
-          )) !== 404
-        ) {
-          return element;
-        }
-      }
-      return "";
-    };*/
-
     let link = "http://covers.openlibrary.org/b/";
     let key = "";
     let value = "";
@@ -82,11 +54,7 @@ function Main({
     if (!!book.cover_i) {
       value = book.cover_i;
       key = "id";
-    } /*
-    if (!!book.isbn && !value) {
-      value = await getSrc(book.isbn, "isbn", link, size);
-      key = !!value ? "isbn" : "";
-    }*/
+    }
 
     return (value = !!value ? `${link}${key}/${value}-${size}.jpg` : imgCover);
   };
