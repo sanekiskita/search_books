@@ -2,6 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
+const isDev = process.env.NODE_ENV === "development";
+
 const Paths = {
   src: path.join(__dirname, "./src"),
   dist: path.join(__dirname, "./docs"),
@@ -61,6 +63,7 @@ module.exports = {
   },
   devServer: {
     port: 8000,
+    hot: isDev,
   },
   resolve: {
     alias: {
