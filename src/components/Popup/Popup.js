@@ -75,14 +75,28 @@ function Popup({ booksImg, books, selectBook, setSelectBook }) {
                   : "неизвестно"}
               </p>
             </div>
-            {
-              <div className="Popup__Publish">
-                Первая публикация в{" "}
-                {!!books[selectBook].first_publish_year
-                  ? `${books[selectBook].first_publish_year}`
-                  : "неизвестно"}
-              </div>
-            }
+            <div className="Popup__Publish">
+              Первая публикация в{" "}
+              {!!books[selectBook].first_publish_year
+                ? `${books[selectBook].first_publish_year}`
+                : "неизвестно"}
+            </div>
+            <div className="Popup__Isbn">
+              ISBN:{" "}
+              {!!books[selectBook].isbn.length
+                ? books[selectBook].isbn
+                    .splice(0, books[selectBook].isbn.length >= 2 ? 2 : 1)
+                    .join(", ")
+                : "нет данных"}
+            </div>
+            <div className="Popup__Publisher">
+              Publisher:{" "}
+              {!!books[selectBook].publisher.length
+                ? books[selectBook].publisher
+                    .splice(0, books[selectBook].publisher.length >= 2 ? 2 : 1)
+                    .join(", ")
+                : "нет данных"}
+            </div>
           </div>
         </div>
       </div>
