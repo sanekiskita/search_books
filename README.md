@@ -1,12 +1,13 @@
 # search_books
 ![image](https://user-images.githubusercontent.com/56951952/117377505-16978900-aedc-11eb-8106-5b5b992d5bcd.png)
+___
+## Реализованные функции
+1. Поиск
+   1. сам начинает искать книги если ввод был изменен
+2. Вывод
+   1. Выводит картинки книг и информацию взятую с API
+   2. Popup выводит более подробную о книгах
 
-## Поиск
-![image](https://user-images.githubusercontent.com/56951952/117378294-c1f50d80-aedd-11eb-91c4-03925da27ff9.png)
-
-
-## Загрузка
-![image](https://user-images.githubusercontent.com/56951952/117377909-0c29bf00-aedd-11eb-9d91-a206b91a5c71.png)
 
 ## Сайт
-Link:...
+Link:<a href="http://well-paid-belief.000webhostapp.com/" target="_blank" >http://well-paid-belief.000webhostapp.com/<a/>
