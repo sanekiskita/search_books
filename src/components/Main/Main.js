@@ -96,7 +96,8 @@ function Main({
     if (cancel !== undefined) {
       cancel();
     }
-
+    newSearchPage = 1;
+    SetSearchPage(newSearchPage);
     searchBooks();
   }, [search]);
 
