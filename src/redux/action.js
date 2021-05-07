@@ -6,6 +6,7 @@ import {
   ADD_COUNT_BOOK,
   DEL_BOOK,
   DEL_BOOKS_IMG,
+  DEL_COUNT_BOOK,
 } from "./types";
 
 export function setSearch(str) {
@@ -50,6 +51,13 @@ export function setSelectBook(str) {
 export function addCountBook(str) {
   return {
     type: ADD_COUNT_BOOK,
+    payload: str,
+  };
+}
+
+export function delCountBook(str) {
+  return {
+    type: DEL_COUNT_BOOK,
     payload: str,
   };
 }

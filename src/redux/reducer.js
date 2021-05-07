@@ -7,6 +7,7 @@ import {
   ADD_COUNT_BOOK,
   DEL_BOOK,
   DEL_BOOKS_IMG,
+  DEL_COUNT_BOOK,
 } from "./types";
 
 function books(state = [], action) {
@@ -54,6 +55,8 @@ function CountBook(state = 20, action) {
   switch (action.type) {
     case ADD_COUNT_BOOK:
       return state + action.payload;
+    case DEL_COUNT_BOOK:
+      return 20;
     default:
       return state;
   }

@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setSearch, delBooks, delBooksImg } from "@redux//action";
+import { setSearch, delBooks, delBooksImg, delCountBook } from "@redux//action";
 //img
 import LogoImg from "@img/Logo.jpg";
 
-function Header({ setSearch, delBooks, delBooksImg, search }) {
+function Header({ setSearch, delBooks, delBooksImg, delCountBook, search }) {
   const [BookValue, setBookValue] = React.useState("");
   const [Timer, setTimer] = React.useState("");
 
@@ -13,6 +13,7 @@ function Header({ setSearch, delBooks, delBooksImg, search }) {
       offTimeout();
       delBooks();
       delBooksImg();
+      delCountBook();
       setSearch(BookValue);
     }
   };
@@ -75,6 +76,9 @@ function Header({ setSearch, delBooks, delBooksImg, search }) {
   );
 }
 
-export default connect((state) => state, { setSearch, delBooks, delBooksImg })(
-  Header
-);
+export default connect((state) => state, {
+  setSearch,
+  delBooks,
+  delBooksImg,
+  delCountBook,
+})(Header);

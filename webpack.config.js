@@ -6,7 +6,7 @@ const isDev = process.env.NODE_ENV === "development";
 
 const Paths = {
   src: path.join(__dirname, "./src"),
-  dist: path.join(__dirname, "./docs"),
+  dist: path.join(__dirname, "./build"),
   assets: "assets/",
 };
 
